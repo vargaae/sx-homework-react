@@ -27,7 +27,7 @@ const Nav = () => {
               </select>
             </li>
             <li className="nav-item active">
-              <Link className="nav-link" to="/login">
+              <Link className="nav-link" to="/game">
                 Start New Game
               </Link>
             </li>
