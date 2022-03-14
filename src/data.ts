@@ -17,23 +17,23 @@ export const shuffleCards = (arr: any[]): any[] => {
     .map(a => a[1]);
 };
 
-export type CardType = {
+export type CardInterface = {
   id: string;
   turnedCard: boolean;
   cardBackImage: string;
   cardFrontImage: string;
-  clickable: boolean;
+  turnable: boolean;
   matchingCardId: string;
 };
 
 const cardsArray: string[] = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10];
 
-export const startCardsBoard = (): CardType[] =>
+export const startCardsBoard = (): CardInterface[] =>
   [...cardsArray, ...cardsArray].map((card, i) => ({
     id: `card${i}`,
     turnedCard: false,
     cardBackImage: cardBack,
     cardFrontImage: card,
-    clickable: true,
+    turnable: true,
     matchingCardId: i < cardsArray.length ? `card${i + cardsArray.length}` : `card${i - cardsArray.length}`
   }));
