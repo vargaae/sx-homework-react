@@ -5,15 +5,17 @@
   margin: 0;
 }
 
+
 .container {
   display: flex;
   background-color: white;
   width: auto;
-  padding: 150px 1%;
 }
 
 .intro-content {
   width: 50%;
+  padding-top: 3rem;
+
 }
 .img-content {
   width: 50%;
@@ -21,6 +23,11 @@
 
 img {
   width: 100%;
+}
+
+.intro-img {
+  height: 100%;
+  padding: 3rem;
 }
 
 .intro-content h1 {
@@ -33,27 +40,4 @@ img {
   font-family: "Roboto", sans-serif;
   font-size: 21px;
   font-weight: 400;
-}
-
-button.buy {
-  margin: 3rem 0;
-  padding: 0.8em 3em;
-  border-radius: 1em;
-  background: #f7a501;
-  color: #fff;
-  font-family: "Roboto Bold", sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-button.watch {
-  margin: 3rem 0;
-  padding: 0.8em 3em;
-  border: 1px #fff solid;
-  border-radius: 1em;
-  color: #fff;
-  font-family: "Roboto Bold", sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 700;
 }

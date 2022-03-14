@@ -1,7 +1,36 @@
 .App {
-  /* text-align: center; */
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.mainframe {
+  margin: auto;
+}
+
+.board-content {
+  margin: 2rem 20%;
+}
+
+.decksize {
+  color: grey;
+}
+
+button.start {
+  margin: 0.1rem 0;
+  padding: 0.1em 1em;
+  border-radius: 0.4em;
+  background: red;
+  color: #fff;
+  font-family: "Roboto Bold", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav-logo {
+  height: 5vh;
+}
+
+.nav-item {
+  padding: 1rem;
+  font-size: 2rem;
 }

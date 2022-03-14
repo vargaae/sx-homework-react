@@ -8,13 +8,15 @@ import Board from "./pages/Board";
 function App() {
  
   return (
-    <>
+    <div className="App">
       <Nav/>
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="/game" element={<Board />} />
-          </Routes>
-    </>
+          <div className="mainframe">
+            <Routes>
+              <Route index element={<Home />} />
+              <Route path="/game" element={<Board />} />
+            </Routes>
+          </div>
+    </div>
   );
 }
 

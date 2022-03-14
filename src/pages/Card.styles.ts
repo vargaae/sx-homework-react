@@ -3,17 +3,22 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.div`
   position: relative;
   perspective: 1000px;
-  .front.turnedCard {
+  .front.flipped {
     z-index: 1;
     transform: rotateY(180deg);
   }
 `;
 
 type Props = {
-  turnedCard: boolean;
+  flipped: boolean;
 };
 
 const sharedStyles = css`
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
   width: 100%;
   height: 100%;
   transition: all 0.5s;
@@ -24,14 +29,14 @@ const sharedStyles = css`
 
 export const FrontImg = styled.img<Props>`
   ${sharedStyles}
-  z-index: ${props => (props.turnedCard ? 2 : 1)};
-  transform: ${props => (props.turnedCard ? 'rotate(0deg)' : 'rotateY(180deg)')};
+  z-index: ${props => (props.flipped ? 2 : 1)};
+  transform: ${props => (props.flipped ? 'rotate(0deg)' : 'rotateY(180deg)')};
 `;
 
 export const BackImg = styled.img<Props>`
   ${sharedStyles}
-  z-index: ${props => (props.turnedCard ? 1 : 2)};
-  transform: ${props => (props.turnedCard ? 'rotateY(180deg)' : 'rotate(360deg)')};
+  z-index: ${props => (props.flipped ? 1 : 2)};
+  transform: ${props => (props.flipped ? 'rotateY(180deg)' : 'rotate(360deg)')};
   position: absolute;
   top: 0px;
   left: 0px;
