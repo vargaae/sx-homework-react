@@ -59,17 +59,24 @@ const Board = () => {
     setClickedCard(undefined);
   };
 
+  const restartGame = () => {
+    setCards(shuffleArray(createBoard()));
+    setGameWon(false);
+    setMatchedPairs(0);
+    setClickedCard(undefined);
+  };
+
   return (
-      <div className="board-content">
-        <a href="">
-          <button className="w-800 btn btn-lg restart">Restart</button>
-        </a>
-        <Grid>
-          {cards.map((card) => (
-            <Card key={card.id} card={card} callback={handleCardClick} />
-          ))}
-        </Grid>
-      </div>
+    <div className="board-content">
+      <button className="w-800 btn btn-lg restart" onClick={restartGame}>
+        Restart
+      </button>
+      <Grid>
+        {cards.map((card) => (
+          <Card key={card.id} card={card} callback={handleCardClick} />
+        ))}
+      </Grid>
+    </div>
   );
 };
 
