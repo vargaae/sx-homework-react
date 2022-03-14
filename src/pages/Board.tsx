@@ -1,24 +1,32 @@
-import React from 'react';
-import Card from './Card';
-import { Grid } from './Board.styles';
-import { createBoard, shuffleArray, CardType } from './../data';
+import React from "react";
+import Card from "./Card";
+import { Grid } from "./Board.styles";
+import { createBoard, shuffleArray, CardType } from "./../data";
 
 const Board = () => {
-  const [cards, setCards] = React.useState<CardType[]>(shuffleArray(createBoard()));
+  const [cards, setCards] = React.useState<CardType[]>(
+    shuffleArray(createBoard())
+  );
   const [gameWon, setGameWon] = React.useState(false);
   const [matchedPairs, setMatchedPairs] = React.useState(0);
-  const [clickedCard, setClickedCard] = React.useState<undefined | CardType>(undefined);
+  const [clickedCard, setClickedCard] = React.useState<undefined | CardType>(
+    undefined
+  );
 
   React.useEffect(() => {
     if (matchedPairs === cards.length / 2) {
-      alert('Game Won!');
+      alert("Game Won!");
       setGameWon(true);
     }
   }, [matchedPairs]);
 
   const handleCardClick = (currentClickedCard: CardType) => {
-    setCards(prev =>
-      prev.map(card => (card.id === currentClickedCard.id ? { ...card, flipped: true, clickable: false } : card))
+    setCards((prev) =>
+      prev.map((card) =>
+        card.id === currentClickedCard.id
+          ? { ...card, flipped: true, clickable: false }
+          : card
+      )
     );
     if (!clickedCard) {
       setClickedCard({ ...currentClickedCard });
@@ -26,10 +34,12 @@ const Board = () => {
     }
 
     if (clickedCard.matchingCardId === currentClickedCard.id) {
-      setMatchedPairs(prev => prev + 1);
-      setCards(prev =>
-        prev.map(card =>
-          card.id === clickedCard.id || card.id === currentClickedCard.id ? { ...card, clickable: false } : card
+      setMatchedPairs((prev) => prev + 1);
+      setCards((prev) =>
+        prev.map((card) =>
+          card.id === clickedCard.id || card.id === currentClickedCard.id
+            ? { ...card, clickable: false }
+            : card
         )
       );
       setClickedCard(undefined);
@@ -37,8 +47,8 @@ const Board = () => {
     }
 
     setTimeout(() => {
-      setCards(prev =>
-        prev.map(card =>
+      setCards((prev) =>
+        prev.map((card) =>
           card.id === clickedCard.id || card.id === currentClickedCard.id
             ? { ...card, flipped: false, clickable: true }
             : card
@@ -50,13 +60,16 @@ const Board = () => {
   };
 
   return (
-    <div className="board-content">
-      <Grid>
-        {cards.map(card => (
-          <Card key={card.id} card={card} callback={handleCardClick} />
-        ))}
-      </Grid>
-    </div>
+      <div className="board-content">
+        <a href="">
+          <button className="w-800 btn btn-lg restart">Restart</button>
+        </a>
+        <Grid>
+          {cards.map((card) => (
+            <Card key={card.id} card={card} callback={handleCardClick} />
+          ))}
+        </Grid>
+      </div>
   );
 };
 

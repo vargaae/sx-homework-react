@@ -26,6 +26,19 @@ button.start {
   font-weight: 700;
 }
 
+button.restart {
+  margin: 0.1rem 0;
+  padding: 0.6em 1em;
+  border-radius: 0.2em;
+  border: 1px solid black;
+  background: white;
+  color: black;
+  font-family: "Roboto Bold", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 .nav-logo {
   height: 5vh;
 }
