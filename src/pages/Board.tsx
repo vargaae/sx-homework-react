@@ -7,7 +7,12 @@ const Board = () => {
   const [gameWon, setGameWon] = React.useState(false)
   const [matchedPairs, setMatchedPairs] = React.useState(0);
   const [turnedCard, setTurnedCard] = React.useState<undefined | CardInterface>(undefined);
-  return <div className="board">Start</div>;
+  return ( <div className="board">
+    {cards.map(card => (
+    <div key={card.id}>{card.id} </div>
+    ))}
+    </div>
+    );
 };
 
 export default Board;
