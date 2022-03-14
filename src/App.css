@@ -2,12 +2,26 @@
   text-align: center;
 }
 
+.navbar {
+  height: 70px;
+}
+
+.nav-logo {
+  height: 5vh;
+}
+
+.nav-item {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
 .mainframe {
   margin: auto;
 }
 
 .board-content {
-  margin: 2rem 20%;
+  max-width: 40rem;
+  margin-inline: auto;
 }
 
 .decksize {
@@ -37,13 +51,4 @@ button.restart {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
-}
-
-.nav-logo {
-  height: 5vh;
-}
-
-.nav-item {
-  padding: 1rem;
-  font-size: 2rem;
 }

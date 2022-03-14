@@ -19,13 +19,19 @@ const Nav = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-          <ul className="navbar-nav me-auto mb-2 mb-md-0">
-            <li className="nav-item">
+        <div className="d-flex justify-content-start align-items-center">
               <span className="decksize">Deck size: </span>
-              <select>
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <select
+                className="form-select form-select-lg"
+                aria-label="deck-size select"
+              >
                 <option>20</option>
               </select>
             </li>
+          </ul>
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <button className="w-800 btn btn-lg start">
                 <Link className="nav-link" to="/game">
@@ -35,6 +41,8 @@ const Nav = () => {
             </li>
           </ul>
         </div>
+        <div></div>
+      </div>
     </nav>
   );
 };

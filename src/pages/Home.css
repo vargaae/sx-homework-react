@@ -7,27 +7,29 @@
 
 
 .container {
-  display: flex;
   background-color: white;
   width: auto;
 }
 
 .intro-content {
-  width: 50%;
-  padding-top: 3rem;
-
-}
-.img-content {
-  width: 50%;
-}
-
-img {
   width: 100%;
 }
 
+.img-content {
+  width: auto;
+  height: 10%;
+  padding: 10px 10%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1em;
+}
+
 .intro-img {
-  height: 100%;
-  padding: 3rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .intro-content h1 {
@@ -40,4 +42,14 @@ img {
   font-family: "Roboto", sans-serif;
   font-size: 21px;
   font-weight: 400;
+}
+
+@media screen and (min-width: 680px) {
+  .container {
+    display: flex;
+  }
+  .intro-content {
+    width: 50%;
+    padding-top: 3rem;
+  }
 }

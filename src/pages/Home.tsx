@@ -4,12 +4,10 @@ import logo from "../images/splendex-logo.svg";
 const Home = () => {
   return (
     <div className="container">
-      <div className="img-content">
-        <img src="https://splendex.io/wp-content/uploads/image-branding-blog-preview.jpg" alt="splendex img" className="intro-img" />
-      </div>
+      
       <div className="intro-content">
         <div>
-        <h2>Homework Game Rules</h2>
+        <h2>Card-matching Game Rules</h2>
           <p>
             Choose a card and carefully turn it over with clicking. Be sure not
             to bother the surrounding cards. The player then selects another
@@ -22,6 +20,9 @@ const Home = () => {
             continues in this fashion until all the cards are played.
           </p>
         </div>
+      </div>
+      <div className="img-content">
+        <img src="https://splendex.io/wp-content/uploads/image-branding-blog-preview.jpg" alt="splendex img" className="intro-img" />
       </div>
     </div>
   );
