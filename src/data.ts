@@ -1,43 +1,22 @@
+import card1 from './images/cards/angular.png';
+import card2 from './images/cards/d3.png';
+import card3 from './images/cards/jenkins.png';
+import card4 from './images/cards/postcss.png';
+import card5 from './images/cards/react.png';
+import card6 from './images/cards/redux.png';
+import card7 from './images/cards/sass.png';
+import card8 from './images/cards/splendex.png';
+import card9 from './images/cards/ts.png';
+import card10 from './images/cards/webpack.png';
+import cardBack from './images/cards/white.png';
 
-export const [] = [
-    {
-      name: 'angular',
-      img: 'images/cards/angular.png'
-    },
-    {
-      name: 'd3',
-      img: 'images/cards/d3.png'
-    },
-    {
-      name: 'jenkins',
-      img: 'images/cards/jenkins.png'
-    },
-    {
-      name: 'postcss',
-      img: 'images/cards/postcss.png'
-    },
-    {
-      name: 'react',
-      img: 'images/cards/react.png'
-    },
-    {
-      name: 'redux',
-      img: 'images/cards/redux.png'
-    },
-    {
-      name: 'sass',
-      img: 'images/cards/sass.png'
-    },
-    {
-      name: 'splendex',
-      img: 'images/cards/splendex.png'
-    },
-    {
-      name: 'ts',
-      img: 'images/cards/ts.png'
-    },
-    {
-      name: 'webpack',
-      img: 'images/cards/webpack.png'
-    }
-];
+export type CardInterface = {
+  id: string;
+  flipped: boolean;
+  backImage: string;
+  frontImage: string;
+  clickable: boolean;
+  matchingCardId: string;
+};
+
+const cardsArray: string[] = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10];
