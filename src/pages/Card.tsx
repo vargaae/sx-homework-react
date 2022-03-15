@@ -14,8 +14,8 @@ const Card: React.FC<Props> = ({ card, callback }) => {
 
   return (
     <Wrapper onClick={handleClick}>
-      <FrontImg flipped={card.flipped} src={card.frontImage} alt='card-front' />
-      <BackImg flipped={card.flipped} src={card.backImage} alt='card-back' />
+      <FrontImg flipped={card.flipped} matched={card.matched} src={card.frontImage} alt='card-front' />
+      <BackImg flipped={card.flipped} matched={card.matched} src={card.backImage} alt='card-back' />
     </Wrapper>
   );
 };

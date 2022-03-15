@@ -3,7 +3,7 @@
 }
 
 nav {
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.8);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.8);
 }
 
 .navbar {
@@ -26,6 +26,15 @@ nav {
 .board-content {
   max-width: 40rem;
   margin-inline: auto;
+  background: url(https://splendex.io/wp-content/uploads/2020/11/circle-big-1.svg);
+  background-size: 150% 150%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: calc(100vh-70px);
+  width: 100vw;
+  overflow: hidden;
+
+  z-index: -1;
 }
 
 .decksize {

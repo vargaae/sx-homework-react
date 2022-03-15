@@ -38,7 +38,7 @@ const Board = () => {
       setCards((prev) =>
         prev.map((card) =>
           card.id === clickedCard.id || card.id === currentClickedCard.id
-            ? { ...card, clickable: false }
+            ? { ...card, clickable: false, matched: true }
             : card
         )
       );
